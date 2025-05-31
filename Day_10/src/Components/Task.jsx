@@ -9,7 +9,7 @@ const Task1 = () => {
       <ul>
         <li><strong>useEffect</strong> is a built-in React hook used to perform side effects in functional components.</li>
         <li>Side effects can include tasks like data fetching, directly updating the DOM, or setting up timers or subscriptions.</li>
-        <li>It runs after the component renders, and you can control when it runs by passing a dependency array.</li>
+        <li>It runs after the component renders, and we can control when it runs by passing a dependency array.</li>
         <li>This helps manage external interactions cleanly and keeps the code more predictable and efficient.</li>
       </ul>
     </div>
