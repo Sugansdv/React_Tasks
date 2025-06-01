@@ -62,7 +62,7 @@ const Task4 = () => {
       <h2>4.  useEffect to log a message whenever a
 counter state changes.</h2>
 <hr />
-      <h2>Count: {count}</h2>
+      <h2 className="dis">Count: {count}</h2>
       <button onClick={() => setCount(count + 1)}>Increase</button>
     </div>
   );
@@ -89,12 +89,12 @@ const Task5 = () => {
       <h2>5. Create two useEffect hooks, one for logging
 name changes and another for age changes.
 </h2><hr />
-      <h2>Name: {name}</h2>
+      <h2 className="dis">Name: {name}</h2>
       <button onClick={() => setName(name === "Dharun" ? "Vishwa" : "Dharun")}>
         Change Name
       </button>
 
-      <h2>Age: {age}</h2>
+      <h2 className="dis">Age: {age}</h2>
       <button onClick={() => setAge(age + 1)}>Increase Age</button>
     </div>
   );
@@ -145,7 +145,7 @@ const Task8 = () => {
       <h2>8. useEffect to update the page title with the
 current counter value.</h2>
 <hr />
-      <h2>Count: {count}</h2>
+      <h2 className="dis">Count: {count}</h2>
       <button onClick={() => setCount(count + 1)}>Increase</button>
     </div>
   );
@@ -167,7 +167,7 @@ const Task9 = () => {
       <h2>9. Log the value of an input field whenever it changes
 using useEffect.</h2>
 <hr />
-      <h2>Type something:</h2>
+      <h2 className="dis">Type something:</h2>
       <input
         type="text"
         value={inputValue}
@@ -183,19 +183,18 @@ const Task10 = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    if (count % 2 === 0) {
+    if (count !== 0 && count % 2 === 0) {
       setMessage("Counter is Even");
     } else {
       setMessage("");
     }
-  }, [count]); 
+  }, [count]);
 
   return (
     <div>
-      <h2>10. Display "Counter is Even" whenever the
-counter is an even number using useEffect.</h2>
-<hr />
-      <h2>Counter: {count}</h2>
+      <h2>10. Display "Counter is Even" whenever the counter is an even number using useEffect.</h2>
+      <hr />
+      <h2 className="dis">Counter: {count}</h2>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       {message && <p>{message}</p>}
     </div>
@@ -218,7 +217,7 @@ const Task11 = () => {
       <h2>11. Use useEffect to fetch user data from a
 placeholder API like https://jsonplaceholder.typicode.com/users.</h2>
 <hr />
-      <h2>User List</h2>
+      <h2 className="dis">User List</h2>
       {users.length === 0 ? (
         <p>Loading users...</p>
       ) : (
@@ -261,7 +260,7 @@ const Task12 = () => {
       <h2>12. Use setTimeout inside useEffect to simulate delayed
 API fetching.</h2>
 <hr />
-      <h2>Users (Fetched after delay)</h2>
+      <h2 className="dis">Users (Fetched after delay)</h2>
       {loading ? (
         <p>Loading...</p>
       ) : (
