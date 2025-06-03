@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from './ThemeContext';
 import '../App.css';
 
+// 4. Access Context with useContext: Use the useContext hook to access context values in a child component.
 const ThemedButton = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
